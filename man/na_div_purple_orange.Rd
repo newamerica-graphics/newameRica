@@ -11,7 +11,8 @@ An object of class \code{character} of length 15.
 na_div_purple_orange
 }
 \description{
-15-color diverging scale from purple (less/colder) to orange (more/warmer).
-Position 8 (Cool Grey/10, \verb{#f2f2f2}) is the neutral midpoint.
+15-color diverging scale from purple (e.g., less/colder) to
+orange (e.g., more/warmer).
+position 8 (Cool Grey/10, \verb{#f2f2f2}) is the neutral midpoint.
 }
 \keyword{datasets}

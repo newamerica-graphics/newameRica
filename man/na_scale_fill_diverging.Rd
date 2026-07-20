@@ -7,27 +7,28 @@
 na_scale_fill_diverging(palette = "orange_teal", n = NULL, ...)
 }
 \arguments{
-\item{palette}{One of \code{"orange_teal"}, \code{"purple_orange"}, or \code{"blue_red"}.}
+\item{palette}{one of \code{"orange_teal"}, \code{"purple_orange"}, or \code{"blue_red"}.}
 
-\item{n}{Optional integer. For ordinal use: 3, 5, or 7.}
+\item{n}{optional integer. for ordinal use: 3, 5, or 7.}
 
-\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_gradient]{ggplot2::scale_fill_gradientn()}}
+\item{...}{addt'l arguments passed to \code{\link[ggplot2:scale_gradient]{ggplot2::scale_fill_gradientn()}}
 or \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}}.}
 }
 \description{
-Applies a brand-specified diverging palette for data with a meaningful midpoint.
+applies a brand-specified diverging palette, used for data with
+a meaningful midpoint
 }
 \details{
-Available palettes:
+available palettes:
 \itemize{
-\item \code{"orange_teal"} — disagree–agree, no–yes
-\item \code{"purple_orange"} — less–more, colder–warmer
-\item \code{"blue_red"} — margin Democrat–margin Republican (political data only)
+\item \code{"orange_teal"} — e.g., disagree–agree, no–yes
+\item \code{"purple_orange"} — e.g., less–more, colder–warmer
+\item \code{"blue_red"} — e.g., margin Democrat–margin Republican (political data)
 }
 
-Omit \code{n} for a continuous gradient (e.g. choropleths). Supply \code{n} (3, 5,
+omit \code{n} for a continuous gradient (e.g. choropleths). supply \code{n} (3, 5,
 or 7) for ordinal/Likert data to get a symmetric discrete subset with a
-visible neutral midpoint. The midpoint grey is always 2 shades lighter than
+neutral midpoint. the midpoint grey is always 2 shades lighter than
 the lightest flanking color.
-\strong{Note:} ordinal subsets are v1 and may be refined in a future release.
+\strong{Note:} ordinal subsets are v1 and may be refined in the future.
 }

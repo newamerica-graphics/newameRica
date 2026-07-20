@@ -11,11 +11,12 @@ An object of class \code{character} of length 15.
 na_div_orange_teal
 }
 \description{
-15-color diverging scale from orange (disagreement/no) to teal (agreement/yes).
-Position 8 (Cool Grey/10, \verb{#f2f2f2}) is the neutral midpoint.
+15-color diverging scale from orange (e.g., disagreement/no) to teal
+(e.g., agreement/yes).
+position 8 (Cool Grey/10, \verb{#f2f2f2}) is the neutral midpoint.
 }
 \details{
-For a subset of colors, index directly:
+for a subset of colors, index directly:
 \code{na_div_orange_teal[c(1, 4, 8, 12, 15)]} gives a 5-point Likert subset.
 }
 \keyword{datasets}

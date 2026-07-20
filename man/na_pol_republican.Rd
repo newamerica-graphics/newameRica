@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_republican}
 \alias{na_pol_republican}
-\title{Republican color — Red/60 (\verb{#d53b58})}
+\title{Republican color: Red/60 (\verb{#d53b58})}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -11,6 +11,6 @@ An object of class \code{character} of length 1.
 na_pol_republican
 }
 \description{
-Republican color — Red/60 (\verb{#d53b58})
+Republican color: Red/60 (\verb{#d53b58})
 }
 \keyword{datasets}

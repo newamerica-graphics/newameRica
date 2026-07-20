@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_swing}
 \alias{na_pol_swing}
-\title{Swing/Undecided color — Purple/40 (\verb{#be9df8})}
+\title{Swing/Undecided color: Purple/40 (\verb{#be9df8})}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -11,6 +11,6 @@ An object of class \code{character} of length 1.
 na_pol_swing
 }
 \description{
-Swing/Undecided color — Purple/40 (\verb{#be9df8})
+Swing/Undecided color: Purple/40 (\verb{#be9df8})
 }
 \keyword{datasets}

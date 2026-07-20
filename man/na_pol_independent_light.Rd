@@ -3,8 +3,8 @@
 \docType{data}
 \name{na_pol_independent_light}
 \alias{na_pol_independent_light}
-\title{Independent light variant — Cool Grey/40 (\verb{#acb2b3}). Use with
-\link{na_pol_independent} for sub-group comparisons. Do not use in the same
+\title{Independent light variant: Cool Grey/40 (\verb{#acb2b3}). use with
+\link{na_pol_independent} for sub-group comparisons. do not use in the same
 chart as \link{na_pol_swing_grey} (same color family).}
 \format{
 An object of class \code{character} of length 1.
@@ -13,8 +13,8 @@ An object of class \code{character} of length 1.
 na_pol_independent_light
 }
 \description{
-Independent light variant — Cool Grey/40 (\verb{#acb2b3}). Use with
-\link{na_pol_independent} for sub-group comparisons. Do not use in the same
+Independent light variant: Cool Grey/40 (\verb{#acb2b3}). use with
+\link{na_pol_independent} for sub-group comparisons. do not use in the same
 chart as \link{na_pol_swing_grey} (same color family).
 }
 \keyword{datasets}

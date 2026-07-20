@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_democrat_light}
 \alias{na_pol_democrat_light}
-\title{Democrat light variant — Blue/30 (\verb{#9fccfe}). Use with \link{na_pol_democrat}
+\title{Democrat light variant: Blue/30 (\verb{#9fccfe}). use with \link{na_pol_democrat}
 for before/after or sub-group comparisons.}
 \format{
 An object of class \code{character} of length 1.
@@ -12,7 +12,7 @@ An object of class \code{character} of length 1.
 na_pol_democrat_light
 }
 \description{
-Democrat light variant — Blue/30 (\verb{#9fccfe}). Use with \link{na_pol_democrat}
+Democrat light variant: Blue/30 (\verb{#9fccfe}). use with \link{na_pol_democrat}
 for before/after or sub-group comparisons.
 }
 \keyword{datasets}

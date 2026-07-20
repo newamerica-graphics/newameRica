@@ -205,9 +205,9 @@ na_null_color     # Cool Grey/20 — default for missing or deemphasized data
 
 ## Font notes
 
-**Chivo** (bundled, default) is registered automatically when the package loads, without any explicit setup needed.
+**Chivo** (default) is New America's Google Fonts fallback and must be installed as a system font. Download from Google Fonts — search "Chivo" at fonts.google.com — and install via Font Book on macOS or by right-clicking and selecting "Install for all users" on Windows.
 
-**Whyte** (New America's primary brand font, by ABC Dinamo) can be used instead by users who have it installed. Install the `.otf` files (named `ABCWhyte-*.otf`) via Font Book on macOS, then call:
+**Whyte** (New America's primary brand font, by ABC Dinamo) can be used instead by users who have it installed. Install the `.otf` files (named `ABCWhyte-*.otf`) via Font Book on macOS or via right-click → "Install for all users" on Windows, then call:
 
 ```r
 na_register_fonts("whyte")

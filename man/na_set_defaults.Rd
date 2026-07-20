@@ -2,21 +2,21 @@
 % Please edit documentation in R/defaults.R
 \name{na_set_defaults}
 \alias{na_set_defaults}
-\title{Set New America ggplot2 defaults for the session}
+\title{set New America ggplot2 defaults for the session}
 \usage{
 na_set_defaults()
 }
 \value{
-Invisibly returns \code{NULL}. Called for side effects.
+invisibly returns \code{NULL}. called for side effects.
 }
 \description{
-Call once per session to:
+call once per session to:
 \itemize{
-\item Set the global ggplot2 theme to \code{\link[=na_base_theme]{na_base_theme()}}
-\item Set default geom colors to New America Teal/50
+\item set the global ggplot2 theme to \code{\link[=na_base_theme]{na_base_theme()}}
+\item set default geom colors to New America Teal/50
 }
 }
 \details{
-Geom-specific scale functions (e.g., \code{\link[=na_scale_fill_categorical]{na_scale_fill_categorical()}}) override
+geom-specific scale functions (e.g., \code{\link[=na_scale_fill_categorical]{na_scale_fill_categorical()}}) override
 these defaults when multiple colors are needed.
 }

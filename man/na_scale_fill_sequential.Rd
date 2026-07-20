@@ -7,20 +7,20 @@
 na_scale_fill_sequential(palette = "teal", n, ...)
 }
 \arguments{
-\item{palette}{One of \code{"teal"} (primary), \code{"purple"}, or \code{"orange"}.}
+\item{palette}{one of \code{"teal"} (primary), \code{"purple"}, or \code{"orange"}.}
 
-\item{n}{Number of ordered groups (2--5) for a discrete scale. Omit for
+\item{n}{number of ordered groups (2--5) for a discrete scale. omit for
 a continuous gradient.}
 
-\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}} or
+\item{...}{addt'l arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}} or
 \code{\link[ggplot2:scale_gradient]{ggplot2::scale_fill_gradientn()}}.}
 }
 \description{
-Applies a brand-specified sequential color ramp. Lighter shades map to
+applies brand-specified sequential color ramp. lighter shades will map to
 smaller/lower values.
 }
 \details{
-Supply \code{n} for a discrete scale (2--5 ordered groups). Omit \code{n} for a
+supply \code{n} for a discrete scale (2--5 ordered groups). omit \code{n} for a
 continuous gradient (e.g. choropleths, heatmaps) -- the full light-to-dark
 ramp is passed to \code{\link[ggplot2:scale_gradient]{ggplot2::scale_fill_gradientn()}}.
 }

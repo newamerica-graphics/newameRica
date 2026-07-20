@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_independent_gold_light}
 \alias{na_pol_independent_gold_light}
-\title{Independent alternate light variant — Gold/20 (\verb{#fade62}). Use with
+\title{Independent alternate light variant: Gold/20 (\verb{#fade62}). use with
 \link{na_pol_independent_gold} for sub-group comparisons.}
 \format{
 An object of class \code{character} of length 1.
@@ -12,7 +12,7 @@ An object of class \code{character} of length 1.
 na_pol_independent_gold_light
 }
 \description{
-Independent alternate light variant — Gold/20 (\verb{#fade62}). Use with
+Independent alternate light variant: Gold/20 (\verb{#fade62}). use with
 \link{na_pol_independent_gold} for sub-group comparisons.
 }
 \keyword{datasets}

@@ -7,11 +7,11 @@
 na_scale_fill_categorical(extended = FALSE, ...)
 }
 \arguments{
-\item{extended}{Logical. Use the 10-color extended palette. Default \code{FALSE}.}
+\item{extended}{logical -- use 10-color extended palette. default \code{FALSE}.}
 
-\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}}.}
+\item{...}{addt'l arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}}.}
 }
 \description{
-A \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}} wrapper defaulting to New America brand
-colors. Use \code{extended = TRUE} for charts with more than 6 categories.
+a \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}} wrapper defaulting to New America brand
+colors. use \code{extended = TRUE} for charts w/ more than 6 categories.
 }

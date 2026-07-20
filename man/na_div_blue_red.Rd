@@ -11,8 +11,9 @@ An object of class \code{character} of length 15.
 na_div_blue_red
 }
 \description{
-15-color diverging scale from blue (Democrat margin) to red (Republican margin).
-Position 8 (Cool Grey/10, \verb{#f2f2f2}) is the neutral midpoint.
-Reserved for U.S. political margin data.
+15-color diverging scale from blue (e.g., Democrat vote margin) to
+red (e.g., Republican vote margin).
+position 8 (Cool Grey/10, \verb{#f2f2f2}) is the neutral midpoint.
+reserved for U.S. political data.
 }
 \keyword{datasets}

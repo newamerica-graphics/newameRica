@@ -7,9 +7,9 @@
 na_theme_scatter()
 }
 \value{
-A ggplot2 theme object.
+a ggplot2 theme object.
 }
 \description{
-Extends \code{\link[=na_base_theme]{na_base_theme()}} with x and y axis lines and no gridlines.
-The axis frame anchors the data space without the visual noise of a grid.
+extends \code{\link[=na_base_theme]{na_base_theme()}} with x and y axis lines and no gridlines.
+the axis frame anchors the data space without the visual noise of a grid.
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_null_color}
 \alias{na_null_color}
-\title{Color for null or missing data}
+\title{color for null or missing data}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -11,7 +11,8 @@ An object of class \code{character} of length 1.
 na_null_color
 }
 \description{
-Cool Grey/20 (\verb{#dadfe0}). Use to represent missing, null, or deemphasized
-data points.
+Cool Grey/20 (\verb{#dadfe0}). use as default for representing missing, null, or
+de-emphasized data points. (YMMV, the right grey shade here is dependent on
+chart type and particularities of your data!)
 }
 \keyword{datasets}

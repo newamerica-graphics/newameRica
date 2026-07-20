@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_democrat}
 \alias{na_pol_democrat}
-\title{Democrat color — Blue/60 (\verb{#037de3})}
+\title{Democrat color: Blue/60 (\verb{#037de3})}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -11,6 +11,6 @@ An object of class \code{character} of length 1.
 na_pol_democrat
 }
 \description{
-Democrat color — Blue/60 (\verb{#037de3})
+Democrat color: Blue/60 (\verb{#037de3})
 }
 \keyword{datasets}

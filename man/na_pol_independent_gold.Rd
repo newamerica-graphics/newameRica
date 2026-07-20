@@ -3,8 +3,8 @@
 \docType{data}
 \name{na_pol_independent_gold}
 \alias{na_pol_independent_gold}
-\title{Independent alternate color — Gold/50 (\verb{#bb8f09}). Use instead of
-\link{na_pol_independent} when a warmer neutral is preferred, or when Cool Grey
+\title{Independent alternate color: Gold/50 (\verb{#bb8f09}). use instead of
+\link{na_pol_independent} when preferred, or when Cool Grey
 is already in use for another group in the same chart.}
 \format{
 An object of class \code{character} of length 1.
@@ -13,8 +13,8 @@ An object of class \code{character} of length 1.
 na_pol_independent_gold
 }
 \description{
-Independent alternate color — Gold/50 (\verb{#bb8f09}). Use instead of
-\link{na_pol_independent} when a warmer neutral is preferred, or when Cool Grey
+Independent alternate color: Gold/50 (\verb{#bb8f09}). use instead of
+\link{na_pol_independent} when preferred, or when Cool Grey
 is already in use for another group in the same chart.
 }
 \keyword{datasets}

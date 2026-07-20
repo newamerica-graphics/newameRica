@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_independent}
 \alias{na_pol_independent}
-\title{Independent color — Cool Grey/80 (\verb{#494b4b})}
+\title{Independent color: Cool Grey/80 (\verb{#494b4b})}
 \format{
 An object of class \code{character} of length 1.
 }
@@ -11,6 +11,6 @@ An object of class \code{character} of length 1.
 na_pol_independent
 }
 \description{
-Independent color — Cool Grey/80 (\verb{#494b4b})
+Independent color: Cool Grey/80 (\verb{#494b4b})
 }
 \keyword{datasets}

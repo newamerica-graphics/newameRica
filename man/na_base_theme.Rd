@@ -7,14 +7,14 @@
 na_base_theme()
 }
 \value{
-A ggplot2 theme object.
+a ggplot2 theme object.
 }
 \description{
-A \code{\link[ggplot2:ggtheme]{ggplot2::theme_minimal()}} extension implementing New America brand
+a \code{\link[ggplot2:ggtheme]{ggplot2::theme_minimal()}} extension implementing New America brand
 typography and styling. Use as the foundation for all chart types; apply
 chart-specific helpers (e.g., \code{\link[=na_theme_bar]{na_theme_bar()}}) on top.
 }
 \details{
-Font sizes use a 0.75 multiplier calibrated for 300 DPI PNG export via
+font sizes use a 0.75 multiplier calibrated for 300 DPI PNG export via
 \code{\link[=na_save]{na_save()}}. Call \code{\link[=na_register_fonts]{na_register_fonts()}} once per session before plotting.
 }

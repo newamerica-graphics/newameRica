@@ -2,15 +2,15 @@
 % Please edit documentation in R/fonts.R
 \name{na_check_fonts}
 \alias{na_check_fonts}
-\title{Check font registration status}
+\title{check font registration status}
 \usage{
 na_check_fonts()
 }
 \value{
-Invisibly returns the active font family name.
+invisibly returns the active font family name.
 }
 \description{
-Reports the currently active font family and whether Whyte is available
-on the system. Run this if charts render in the wrong font after calling
+reports the currently active font family and whether Whyte is available
+on the system. run this if charts render in the wrong font after calling
 \code{\link[=na_register_fonts]{na_register_fonts()}}.
 }

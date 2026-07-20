@@ -2,7 +2,7 @@
 % Please edit documentation in R/save.R
 \name{na_save}
 \alias{na_save}
-\title{Save a plot with New America defaults}
+\title{save a plot with New America defaults!}
 \usage{
 na_save(
   filename,
@@ -13,27 +13,27 @@ na_save(
 )
 }
 \arguments{
-\item{filename}{Output file path. Extension should be \code{.png}.}
+\item{filename}{output file path. extension should be \code{.png}.}
 
-\item{size}{Named size preset: \code{"small"}, \code{"medium"} (default), or \code{"large"}.}
+\item{size}{named size preset: \code{"small"}, \code{"medium"} (default), or \code{"large"}.}
 
-\item{height}{Optional height override in inches. Overrides the preset height
+\item{height}{optional height override in inches. overrides the preset height
 while keeping the preset width.}
 
-\item{dpi}{Resolution in dots per inch. Default 300.}
+\item{dpi}{resolution in dots per inch. default 300.}
 
-\item{plot}{The plot to save. Defaults to the last plot displayed.}
+\item{plot}{the plot to save. defaults to the last plot displayed.}
 }
 \value{
-The \code{filename}, invisibly.
+the \code{filename}, invisibly.
 }
 \description{
-A \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}} wrapper with New America-standard export settings:
+a \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}} wrapper with New America-standard export settings:
 the ragg PNG device for correct font rendering, a white background, and
-named size presets at 300 DPI. Use the \code{dpi} argument to override if needed.
+named size presets at 300 DPI. use the \code{dpi} argument to override if needed.
 }
 \details{
-\subsection{Size presets (width × height in inches, 300 DPI)}{\tabular{llll}{
+\subsection{size presets (width × height in inches, 300 DPI)}{\tabular{llll}{
    \code{size} \tab Width \tab Height \tab Pixels \cr
    \code{"small"} \tab 3.25 \tab 2.5 \tab 975 × 750 px \cr
    \code{"medium"} \tab 6.5 \tab 4.5 \tab 1950 × 1350 px \cr

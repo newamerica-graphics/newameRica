@@ -12,7 +12,7 @@
 na_base_theme <- function() {
   scale        <- 0.75  # calibrated for 300 DPI PNG via na_save()
   body_font    <- getOption("newameRica.font_family",    "Chivo")
-  caption_font <- getOption("newameRica.caption_family", "Chivo Light")
+  caption_font <- getOption("newameRica.caption_family", "Chivo")
 
   ggplot2::theme_minimal(base_family = body_font) +
     ggplot2::theme(

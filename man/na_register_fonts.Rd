@@ -2,29 +2,27 @@
 % Please edit documentation in R/fonts.R
 \name{na_register_fonts}
 \alias{na_register_fonts}
-\title{Register fonts for use with ggplot2}
+\title{register fonts for use with ggplot2}
 \usage{
 na_register_fonts(font = c("chivo", "whyte"))
 }
 \arguments{
-\item{font}{Which font to register: \code{"chivo"} (default, bundled) or
-\code{"whyte"} (system-installed Whyte by ABC Dinamo).}
+\item{font}{which font to use: \code{"chivo"} (default) or \code{"whyte"}.}
 }
 \value{
-Invisible logical. \code{TRUE} if registration succeeded, \code{FALSE} otherwise.
+invisible logical. \code{TRUE} if successful, \code{FALSE} otherwise.
 }
 \description{
-Registers the active New America font with systemfonts so it is available
-in ggplot2 via ragg. Call once per R session, or add to your \code{.Rprofile}.
+switches the active New America font for the session. call once per session,
+or add to your \code{.Rprofile}.
 }
 \details{
-\code{"chivo"} (default) uses the Chivo font bundled with this package -- no
-installation required. \code{"whyte"} uses Whyte (by ABC Dinamo), which must be
-installed in a system font directory (\verb{~/Library/Fonts/} or \verb{/Library/Fonts/}
-on macOS).
+\code{"whyte"} registers Whyte (by ABC Dinamo) from system font directories and
+activates it. Whyte must be installed in \verb{~/Library/Fonts/} or
+\verb{/Library/Fonts/} on macOS -- contact the design team for the font files.
 
-Chivo is also registered automatically when the package loads, so for most
-users an explicit call is optional. The main reasons to call this function
-are: to see a confirmation message, to switch to Whyte, or to
-re-register after a session anomaly.
+\code{"chivo"} (default) resets to Chivo, New America's Google Fonts fallback.
+Chivo must be installed as a system font -- download the static files from
+Google Fonts (fonts.google.com, search "Chivo") and install via Font Book
+on macOS. install the static files, not the variable font.
 }

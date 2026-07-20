@@ -3,7 +3,7 @@
 \docType{data}
 \name{na_pol_republican_light}
 \alias{na_pol_republican_light}
-\title{Republican light variant — Red/30 (\verb{#fdb0b4}). Use with \link{na_pol_republican}
+\title{Republican light variant: Red/30 (\verb{#fdb0b4}). use with \link{na_pol_republican}
 for before/after or sub-group comparisons.}
 \format{
 An object of class \code{character} of length 1.
@@ -12,7 +12,7 @@ An object of class \code{character} of length 1.
 na_pol_republican_light
 }
 \description{
-Republican light variant — Red/30 (\verb{#fdb0b4}). Use with \link{na_pol_republican}
+Republican light variant: Red/30 (\verb{#fdb0b4}). use with \link{na_pol_republican}
 for before/after or sub-group comparisons.
 }
 \keyword{datasets}

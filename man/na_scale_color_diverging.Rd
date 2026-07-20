@@ -7,14 +7,14 @@
 na_scale_color_diverging(palette = "orange_teal", n = NULL, ...)
 }
 \arguments{
-\item{palette}{One of \code{"orange_teal"}, \code{"purple_orange"}, or \code{"blue_red"}.}
+\item{palette}{one of \code{"orange_teal"}, \code{"purple_orange"}, or \code{"blue_red"}.}
 
-\item{n}{Optional integer. For ordinal use: 3, 5, or 7.}
+\item{n}{optional integer. for ordinal use: 3, 5, or 7.}
 
-\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_gradient]{ggplot2::scale_color_gradientn()}}
+\item{...}{addt'l arguments passed to \code{\link[ggplot2:scale_gradient]{ggplot2::scale_color_gradientn()}}
 or \code{\link[ggplot2:scale_manual]{ggplot2::scale_color_manual()}}.}
 }
 \description{
-Applies a brand-specified diverging palette for line charts, points, or
+applies a brand-specified diverging palette for line charts, points, or
 other non-fill geoms. See \code{\link[=na_scale_fill_diverging]{na_scale_fill_diverging()}} for full details.
 }

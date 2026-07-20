@@ -7,18 +7,17 @@
 na_theme_bar(horizontal = FALSE)
 }
 \arguments{
-\item{horizontal}{Logical. Set to \code{TRUE} for horizontal bar charts. Default \code{FALSE}.}
+\item{horizontal}{logical. set to \code{TRUE} for horizontal bar charts. default \code{FALSE}.}
 }
 \value{
-A list of ggplot2 objects (theme + baseline layer).
+a list of ggplot2 objects (theme + baseline layer)
 }
 \description{
-Extends \code{\link[=na_base_theme]{na_base_theme()}} with bar chart-specific settings. Supports both
-vertical (column) and horizontal orientations. A zero baseline is always
-included — bar charts must start at zero.
+extends \code{\link[=na_base_theme]{na_base_theme()}} with bar chart-specific settings. supports both
+vertical (column) and horizontal orientations.
 }
 \details{
-\strong{Preferred approach for horizontal bars:} swap \code{aes()} so category is on
+\strong{preferred approach for horizontal bars:} swap \code{aes()} so category is on
 \code{y} and value is on \code{x}. ggplot2 renders bars horizontally automatically:
 
 \if{html}{\out{<div class="sourceCode r">}}\preformatted{ggplot(df, aes(y = category, x = value)) +
@@ -26,8 +25,8 @@ included — bar charts must start at zero.
   na_theme_bar(horizontal = TRUE)
 }\if{html}{\out{</div>}}
 
-\strong{Alternative (\code{coord_flip()}):} keep the default \code{aes()} mapping and add
-\code{coord_flip()}. Add \code{\link[=na_baseline]{na_baseline()}} manually — it uses \code{geom_hline()},
+\strong{alternative (\code{coord_flip()}):} keep the default \code{aes()} mapping and add
+\code{coord_flip()}. add \code{\link[=na_baseline]{na_baseline()}} manually; it uses \code{geom_hline()},
 which flips correctly with \code{coord_flip()}:
 
 \if{html}{\out{<div class="sourceCode r">}}\preformatted{ggplot(df, aes(x = category, y = value)) +

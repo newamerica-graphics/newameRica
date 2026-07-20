@@ -7,16 +7,16 @@
 na_baseline()
 }
 \value{
-A ggplot2 layer.
+a ggplot2 layer
 }
 \description{
-A \code{\link[ggplot2:geom_abline]{ggplot2::geom_hline()}} at y = 0 styled to the brand spec (Cool Grey/50,
+a \code{\link[ggplot2:geom_abline]{ggplot2::geom_hline()}} at y = 0 styled to the brand spec (Cool Grey/50,
 0.4px). \code{\link[=na_theme_bar]{na_theme_bar()}} includes a baseline automatically — use this
 directly in two cases:
 \itemize{
-\item A non-bar chart that crosses zero (e.g. a line chart)
-\item A horizontal bar chart built with \code{coord_flip()} (use with
-\code{na_theme_bar(horizontal = TRUE, baseline = FALSE)} — \code{geom_hline} flips
+\item a non-bar chart that crosses zero (e.g., a line chart)
+\item a horizontal bar chart built with \code{coord_flip()} (use with
+\code{na_theme_bar(horizontal = TRUE, baseline = FALSE)}; \code{geom_hline} flips
 correctly with \code{coord_flip()}, whereas the bundled \code{geom_vline} would not)
 }
 }

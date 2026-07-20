@@ -7,8 +7,8 @@
 na_scale_color_political(...)
 }
 \arguments{
-\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_color_manual()}}.}
+\item{...}{addt'l arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_color_manual()}}.}
 }
 \description{
-Applies U.S. political party colors. Reserved for U.S. political data only.
+applies U.S. political party colors. reserved for U.S. political data only.
 }

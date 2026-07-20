@@ -11,16 +11,16 @@ An object of class \code{character} of length 4.
 na_pol_pal
 }
 \description{
-Named vector of brand colors for U.S. political groups. Reserved for U.S.
-political data only. Names match expected \code{fill} or \code{color} factor levels:
+named vector of brand colors for U.S. political groups. reserved for U.S.
+political data only. names match expected \code{fill} or \code{color} factor levels:
 \code{"Democrat"}, \code{"Republican"}, \code{"Independent"}, \code{"Swing"}.
 }
 \details{
-For before/after or sub-group comparisons of Democrats and Republicans, see
-\link{na_pol_pal_paired}. For Independent/Swing alternate color families, use the
-individual constants (e.g. \link{na_pol_independent_gold}, \link{na_pol_swing_grey}).
+for before/after or sub-group comparisons of Democrats and Republicans, see
+\link{na_pol_pal_paired}. for Independent/Swing alternate color families, use the
+individual constants (e.g., \link{na_pol_independent_gold}, \link{na_pol_swing_grey}).
 
-\strong{Note:} Use grey for only one group per chart. If Independent uses
-Cool Grey/80, Swing must use Purple (not \link{na_pol_swing_grey}).
+\strong{Note:} use grey for only one group per chart. if Independent uses
+Cool Grey/80 (default), swing must use Purple, not \link{na_pol_swing_grey}.
 }
 \keyword{datasets}

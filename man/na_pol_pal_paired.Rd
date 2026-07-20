@@ -11,13 +11,13 @@ An object of class \code{character} of length 4.
 na_pol_pal_paired
 }
 \description{
-Named vector of Democrat and Republican colors with their light variants,
-for before/after or sub-group comparisons. Factor levels in your data should
+named vector of Democrat and Republican colors with their light variants,
+for before/after or sub-group comparisons. factor levels in your data should
 match the names: \code{"Democrat"}, \code{"Democrat Light"}, \code{"Republican"},
 \code{"Republican Light"}.
 }
 \details{
-For Independent and Swing paired variants, compose from individual constants
+for Independent and Swing paired variants, compose from individual constants
 (\link{na_pol_independent_light}, \link{na_pol_swing_dark}, etc.) since the correct
 color family depends on what other groups appear in the chart.
 }

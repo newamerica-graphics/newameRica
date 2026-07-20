@@ -11,7 +11,7 @@ An object of class \code{character} of length 10.
 na_ext_cat_pal
 }
 \description{
-Use for charts with 7–10 distinct categories. Prefer \link{na_cat_pal} for 6 or
-fewer groups.
+Use sparingly for charts with 7–10 distinct categories. Prefer \link{na_cat_pal}
+for 6 or fewer groups.
 }
 \keyword{datasets}

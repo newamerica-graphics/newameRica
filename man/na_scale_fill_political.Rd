@@ -7,10 +7,10 @@
 na_scale_fill_political(...)
 }
 \arguments{
-\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}}.}
+\item{...}{addt'l arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}}.}
 }
 \description{
-Applies U.S. political party colors. Reserved for U.S. political data only.
-Factor levels in your data should match the names in \link{na_pol_pal}:
+applies U.S. political party colors. reserved for U.S. political data only.
+factor levels in your data should match the names in \link{na_pol_pal}:
 \code{"Democrat"}, \code{"Republican"}, \code{"Independent"}, \code{"Swing"}.
 }

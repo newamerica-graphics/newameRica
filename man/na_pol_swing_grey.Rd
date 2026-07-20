@@ -3,9 +3,9 @@
 \docType{data}
 \name{na_pol_swing_grey}
 \alias{na_pol_swing_grey}
-\title{Swing alternate color — Cool Grey/40 (\verb{#acb2b3}). Use instead of
+\title{Swing alternate color: Cool Grey/40 (\verb{#acb2b3}). use instead of
 \link{na_pol_swing} when \link{na_pol_independent_gold} is used for Independent
-(freeing up the grey family for Swing). Do not use in the same chart as
+(freeing up the cool grey family for Swing). do not use in same chart as
 \link{na_pol_independent} (same color family).}
 \format{
 An object of class \code{character} of length 1.
@@ -14,9 +14,9 @@ An object of class \code{character} of length 1.
 na_pol_swing_grey
 }
 \description{
-Swing alternate color — Cool Grey/40 (\verb{#acb2b3}). Use instead of
+Swing alternate color: Cool Grey/40 (\verb{#acb2b3}). use instead of
 \link{na_pol_swing} when \link{na_pol_independent_gold} is used for Independent
-(freeing up the grey family for Swing). Do not use in the same chart as
+(freeing up the cool grey family for Swing). do not use in same chart as
 \link{na_pol_independent} (same color family).
 }
 \keyword{datasets}
