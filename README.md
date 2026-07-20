@@ -5,7 +5,7 @@ A ggplot2 theme and color palette system implementing New America's data visuali
 ## Prerequisites
 
 - R ≥ 4.1
-- ggplot2 ≥ 3.5.0
+- ggplot2 ≥ 3.5.0 (included in tidyverse)
 - Packages: `ggplot2`, `ragg`, `systemfonts` (installed automatically as dependencies)
 
 No font installation required — **Chivo** (New America's fallback Google Font) is bundled with the package and registered automatically on load.
