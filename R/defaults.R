@@ -3,8 +3,6 @@
 #' call once per session to:
 #' - set the global ggplot2 theme to [na_base_theme()]
 #' - set default geom colors to New America Teal/50
-#' - switch the RStudio plot pane to the ragg device so bundled fonts
-#'   render correctly in previews (same device used by [na_save()])
 #'
 #' geom-specific scale functions (e.g., [na_scale_fill_categorical()]) override
 #' these defaults when multiple colors are needed.
@@ -22,11 +20,6 @@ na_set_defaults <- function() {
   ggplot2::update_geom_defaults("path",    list(colour = teal_50))
   ggplot2::update_geom_defaults("boxplot", list(fill   = teal_50))
   ggplot2::update_geom_defaults("density", list(fill   = teal_50))
-
-  # use ragg in rstudio plot pane so registered fonts render in previews
-  if (interactive() && identical(Sys.getenv("RSTUDIO"), "1")) {
-    options(device = ragg::agg_supr)
-  }
 
   invisible(NULL)
 }

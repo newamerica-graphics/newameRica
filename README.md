@@ -40,10 +40,8 @@ na_save("output/chart.png")
 Call this once at the top of every script or in your `.Rprofile`:
 
 ```r
-na_set_defaults()  # sets global theme, teal geom defaults, and ragg preview device
+na_set_defaults()  # sets global theme and teal defaults for all geoms
 ```
-
-In RStudio, this also switches the plot pane to the ragg graphics device so fonts render correctly in previews, which is the same device used by `na_save()`.
 
 Chivo is registered automatically when the package loads, so no additional font setup is required. 
 
