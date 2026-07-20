@@ -1,0 +1,20 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# package build artifacts
+*.tar.gz
+*.Rcheck/
+/doc/
+/Meta/
+
+# gallery outputs
+gallery/output/
+
+# local dev files
+dev/
+
+# macOS
+.DS_Store

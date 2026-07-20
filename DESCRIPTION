@@ -1,0 +1,19 @@
+Package: newameRica
+Title: New America Data Visualization Theme for ggplot2
+Version: 0.1.0
+Authors@R:
+    person("New America - Design Team", role = c("aut", "cre"),
+           email = "design@newamerica.org")
+Description: A ggplot2 theme and color palette system implementing New America's
+    brand guidelines for data visualization. Provides a base theme, categorical
+    and sequential color palettes, and a save function with correct font
+    rendering defaults. The Chivo typeface (our Google Fonts fallback) is bundled and used by default;
+    users with Whyte (by ABC Dinamo) installed can switch via na_register_fonts("whyte").
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    ggplot2 (>= 3.5.0),
+    ragg,
+    systemfonts
