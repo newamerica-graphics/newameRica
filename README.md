@@ -172,7 +172,7 @@ na_save("output/chart.png", size = "medium")
 
 | `size` | Width | Height | Pixels | Use for |
 |---|---|---|---|---|
-| `"small"` | 3.25 in | 2.5 in | 975 × 750 px | inline figures in two-column layouts; half-column PDF charts |
+| `"small"` | 3.25 in | 2.5 in | 975 × 750 px | one column in a two-column PDF or digital layout |
 | `"medium"` | 6.5 in | 4.5 in | 1950 × 1350 px | standard digital report charts (default) |
 | `"large"` | 9 in | 6.5 in | 2700 × 1950 px | complex or dense charts that may need more space |
 
