@@ -17,3 +17,7 @@ Imports:
     ggplot2 (>= 3.5.0),
     ragg,
     systemfonts
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

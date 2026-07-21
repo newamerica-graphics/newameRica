@@ -1,0 +1,133 @@
+---
+title: "Getting started with newameRica"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with newameRica}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment  = "#>",
+  fig.width  = 5,
+  fig.height = 3.5,
+  dpi = 300,
+  out.width = "80%",
+  fig.align = "left"
+)
+```
+
+newameRica provides a ggplot2 theme and color palette system built on New America's data visualization brand guidelines. This guide covers the core workflow: session setup, a bar chart, a line chart, and saving your output.
+
+## Prerequisites
+
+Install Chivo from Google Fonts before using the package. Search "Chivo" at fonts.google.com and install via Font Book on macOS, or right-click → "Install for all users" on Windows.
+
+Then install the package:
+
+```{r install, eval = FALSE}
+devtools::install_github("newamerica-graphics/newameRica")
+```
+
+## Session setup
+
+Load the package and ggplot2 (or tidyverse), then call `na_set_defaults()` once. This sets the global ggplot2 theme and default geom colors for the session.
+
+```{r session}
+library(newameRica)
+library(ggplot2)  # included in tidyverse — either works
+
+na_set_defaults()
+```
+
+If you have Whyte installed and are preparing charts for publication, switch to it now:
+
+```{r whyte, eval = FALSE}
+na_register_fonts("whyte")
+```
+
+## Bar chart
+
+Use `na_theme_bar()` for vertical and horizontal bar charts. It sets bar-specific grid and axis styling, and automatically adds a zero baseline.
+
+```{r bar}
+df_bar <- data.frame(
+  category = c("Category A", "Category B", "Category C", "Category D", "Category E"),
+  value    = c(42, 67, 31, 55, 78)
+)
+
+ggplot(df_bar, aes(x = category, y = value)) +
+  geom_col() +
+  na_theme_bar() +
+  labs(
+    title   = "Chart Title",
+    subtitle = "Subtitle or supporting description",
+    caption  = "Source: Example data"
+  )
+```
+
+For horizontal bars, swap the `aes()` mapping and pass `horizontal = TRUE`:
+
+```{r bar-horizontal}
+ggplot(df_bar, aes(y = category, x = value)) +
+  geom_col() +
+  na_theme_bar(horizontal = TRUE) +
+  labs(
+    title    = "Chart Title",
+    subtitle = "Subtitle or supporting description",
+    caption  = "Source: Example data"
+  )
+```
+
+## Line chart
+
+For single-series line charts, `na_set_defaults()` handles everything.
+
+```{r line}
+df_line <- data.frame(
+  year  = 2015:2024,
+  value = c(12, 15, 14, 18, 22, 20, 25, 27, 24, 30)
+)
+
+ggplot(df_line, aes(x = year, y = value)) +
+  geom_line(linewidth = 0.8) +
+  scale_x_continuous(breaks = seq(2015, 2024, 2)) +
+  labs(
+    title    = "Chart Title",
+    subtitle = "Subtitle or supporting description",
+    caption  = "Source: Example data"
+  )
+```
+
+## Saving
+
+Use `na_save()` instead of `ggsave()` directly. It uses the ragg device for correct font rendering and applies size-appropriate font scaling automatically.
+
+```{r save, eval = FALSE}
+na_save("output/bar-chart.png", size = "medium")
+```
+
+Size presets:
+
+| `size` | Width | Height | Pixels | Use for |
+|---|---|---|---|---|
+| `"small"` | 3.25 in | 2.5 in | 975 × 750 px | one column in a two-column PDF or digital layout |
+| `"medium"` | 6.5 in | 4.5 in | 1950 × 1350 px | standard digital report charts (default) |
+| `"large"` | 9 in | 6.5 in | 2700 × 1950 px | complex or dense charts that may need more space |
+
+To save the last plot at a specific size:
+
+```{r save-explicit, eval = FALSE}
+p <- ggplot(df_bar, aes(x = category, y = value)) +
+  geom_col() +
+  na_theme_bar() +
+  labs(title = "Chart Title", caption = "Source: Example data")
+
+na_save("output/bar-chart.png", size = "medium", plot = p)
+```
+
+## Next steps
+
+See the [README](https://github.com/newamerica-graphics/newameRica) for the full reference: color scales (categorical, sequential, diverging, political), additional chart types, and font setup details.
