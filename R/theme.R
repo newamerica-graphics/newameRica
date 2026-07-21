@@ -22,7 +22,7 @@ na_base_theme <- function(scale = 0.75) {
       plot.title        = ggplot2::element_text(face = "bold", size = 19 * scale),
       plot.subtitle     = ggplot2::element_text(
         size = 15 * scale, color = cool_grey_90,
-        margin = ggplot2::margin(t = 2, b = 10)
+        margin = ggplot2::margin(t = 2, b = 18)
       ),
       plot.title.position  = "plot",
       plot.caption         = ggplot2::element_text(
@@ -70,7 +70,7 @@ na_base_theme <- function(scale = 0.75) {
     ),
     plot.subtitle = ggplot2::element_text(
       size   = 15 * scale,
-      margin = ggplot2::margin(t = 2 * scale, b = 10 * scale)
+      margin = ggplot2::margin(t = 2 * scale, b = 18 * scale)
     ),
     plot.caption  = ggplot2::element_text(
       size   = 12 * scale,
