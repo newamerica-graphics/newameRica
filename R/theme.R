@@ -4,13 +4,15 @@
 #' typography and styling. Use as the foundation for all chart types; apply
 #' chart-specific helpers (e.g., [na_theme_bar()]) on top.
 #'
-#' font sizes use a 0.75 multiplier calibrated for 300 DPI PNG export via
-#' [na_save()]. Call [na_register_fonts()] once per session before plotting.
+#' font sizes scale with the `scale` multiplier. the default (0.75) is
+#' calibrated for medium-size 300 DPI PNG export via [na_save()], which
+#' automatically adjusts the scale for small and large sizes.
 #'
+#' @param scale numeric font size multiplier. default 0.75, calibrated for
+#'   medium 300 DPI export. [na_save()] overrides this automatically per size.
 #' @return a ggplot2 theme object.
 #' @export
-na_base_theme <- function() {
-  scale        <- 0.75  # calibrated for 300 DPI PNG via na_save()
+na_base_theme <- function(scale = 0.75) {
   body_font    <- getOption("newameRica.font_family",    "Chivo")
   caption_font <- getOption("newameRica.caption_family", "Chivo")
 
@@ -26,12 +28,12 @@ na_base_theme <- function() {
       plot.caption         = ggplot2::element_text(
         family = caption_font,
         size = 12 * scale, color = cool_grey_90, hjust = 0,
-        margin = ggplot2::margin(t = 12)
+        margin = ggplot2::margin(t = 20)
       ),
       plot.caption.position = "plot",
       axis.text   = ggplot2::element_text(size = 14 * scale),
-      axis.text.x = ggplot2::element_text(color = cool_grey_70),
-      axis.text.y = ggplot2::element_text(color = cool_grey_50),
+      axis.text.x = ggplot2::element_text(color = cool_grey_70, margin = ggplot2::margin(t = 1)),
+      axis.text.y = ggplot2::element_text(color = cool_grey_50, margin = ggplot2::margin(r = 1)),
       axis.title.x = ggplot2::element_blank(),
       axis.title.y = ggplot2::element_blank(),
       legend.position            = "top",
@@ -55,6 +57,32 @@ na_base_theme <- function() {
       strip.background   = ggplot2::element_blank(),
       panel.spacing      = ggplot2::unit(16, "pt")
     )
+}
+
+# internal: re-applies only font size elements at a given scale.
+# used by na_save() to adjust sizes per chart size without clobbering
+# chart-type-specific theme overrides from na_theme_bar() etc.
+.na_size_theme <- function(scale) {
+  ggplot2::theme(
+    plot.title    = ggplot2::element_text(
+      size   = 19 * scale,
+      margin = ggplot2::margin(b = 5.5 * scale)
+    ),
+    plot.subtitle = ggplot2::element_text(
+      size   = 15 * scale,
+      margin = ggplot2::margin(t = 2 * scale, b = 10 * scale)
+    ),
+    plot.caption  = ggplot2::element_text(
+      size   = 12 * scale,
+      margin = ggplot2::margin(t = 20 * scale)
+    ),
+    axis.text     = ggplot2::element_text(size = 14 * scale),
+    axis.text.x   = ggplot2::element_text(margin = ggplot2::margin(t = 1 * scale)),
+    axis.text.y   = ggplot2::element_text(margin = ggplot2::margin(r = 1 * scale)),
+    legend.text   = ggplot2::element_text(size = 14 * scale),
+    strip.text    = ggplot2::element_text(size = 14 * scale),
+    legend.margin = ggplot2::margin(0, 0, 4 * scale, 0)
+  )
 }
 
 #' New America zero baseline

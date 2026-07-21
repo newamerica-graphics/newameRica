@@ -8,7 +8,7 @@ A ggplot2 theme and color palette system implementing New America's data visuali
 - ggplot2 ≥ 3.5.0 (included in tidyverse)
 - Packages: `ggplot2`, `ragg`, `systemfonts` (installed automatically as dependencies)
 
-No font installation required — **Chivo** (New America's fallback Google Font) is bundled with the package and registered automatically on load.
+Requires **Chivo** installed as a system font — see [Font notes](#font-notes) below.
 
 ## Installation
 
@@ -23,7 +23,7 @@ devtools::install_github("newamerica-graphics/newameRica")
 library(newameRica)
 library(ggplot2)
 
-# Once per session: set ggplot2 defaults (Chivo is registered automatically on load)
+# once per session: set ggplot2 defaults
 na_set_defaults()
 
 # Single-series bar chart — teal fill and zero baseline applied automatically
@@ -43,9 +43,7 @@ Call this once at the top of every script or in your `.Rprofile`:
 na_set_defaults()  # sets global theme and teal defaults for all geoms
 ```
 
-Chivo is registered automatically when the package loads, so no additional font setup is required. 
-
-However, to use our custom, licensed font, Whyte, you will need to register it directly. Please use Whyte if you are preparing charts for publications. Here's how to register:
+To use our custom, licensed font, Whyte, you will need to register it directly. Please use Whyte if you are preparing charts for publications. Here's how to register:
 
 ```r
 na_register_fonts("whyte")  # registers Whyte + Whyte Book and activates them
@@ -172,11 +170,11 @@ na_save("output/chart.png", size = "medium")
 
 ### Size presets (300 DPI)
 
-| `size` | Width | Height | Pixels |
-|---|---|---|---|
-| `"small"` | 3.25 in | 2.5 in | 975 × 750 px |
-| `"medium"` | 6.5 in | 4.5 in | 1950 × 1350 px |
-| `"large"` | 9 in | 6.5 in | 2700 × 1950 px |
+| `size` | Width | Height | Pixels | Use for |
+|---|---|---|---|---|
+| `"small"` | 3.25 in | 2.5 in | 975 × 750 px | inline figures in two-column layouts; half-column PDF charts |
+| `"medium"` | 6.5 in | 4.5 in | 1950 × 1350 px | standard digital report charts (default) |
+| `"large"` | 9 in | 6.5 in | 2700 × 1950 px | complex or dense charts that may need more space |
 
 Use the `height` argument to override the preset height while keeping the preset width.
 

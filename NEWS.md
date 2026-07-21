@@ -12,7 +12,7 @@ Initial release.
 
 * `na_set_defaults()` — sets global ggplot2 theme and geom color defaults for the session
 * `na_reset_defaults()` — reverses `na_set_defaults()`; restores `theme_gray()` and ggplot2 geom defaults
-* `na_register_fonts()` — registers fonts for use with ggplot2 via ragg. Default (`"chivo"`) uses the Chivo typeface from Google Fonts bundled with the package. Pass `"whyte"` to use Whyte (our custom, licensed font by ABC Dinamo) from system font directories for users who have it installed.
+* `na_register_fonts()` — switches the active font for the session. Default (`"chivo"`) uses Chivo (install from Google Fonts). Pass `"whyte"` to use Whyte (our custom, licensed font by ABC Dinamo) from system font directories for users who have it installed.
 * `na_check_fonts()` — reports which font is active and whether Whyte is available on the system
 
 ## Saving

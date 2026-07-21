@@ -275,3 +275,24 @@ p_pol_paired <- ggplot(ga_pol_paired,
   )
 
 na_save("gallery/output/bar-political-paired.png", size = "medium")
+
+# ---------------------------------------------------------------------------
+# font scale comparison — same chart at all three sizes
+# used to visually tune scale values in na_save()
+# ---------------------------------------------------------------------------
+
+p_scale_test <- ggplot(ga_cat, aes(x = category, y = value)) +
+  geom_col() +
+  na_theme_bar() +
+  labs(
+    title    = "Font Scale Test",
+    subtitle = "Check that text feels proportional at each size",
+    caption  = "Source: Example data, newameRica gallery"
+  )
+
+na_save("gallery/output/scale-test-small.png",  size = "small",  plot = p_scale_test)
+na_save("gallery/output/scale-test-medium.png", size = "medium", plot = p_scale_test)
+na_save("gallery/output/scale-test-large.png",  size = "large",  plot = p_scale_test)
+
+na_save("gallery/output/scale-test-facet-medium.png", size = "medium", plot = p_facet)
+na_save("gallery/output/scale-test-facet-large.png",  size = "large",  plot = p_facet)

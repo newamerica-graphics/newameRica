@@ -6,9 +6,9 @@ Authors@R:
            email = "design@newamerica.org")
 Description: A ggplot2 theme and color palette system implementing New America's
     brand guidelines for data visualization. Provides a base theme, categorical
-    and sequential color palettes, and a save function with correct font
-    rendering defaults. The Chivo typeface (our Google Fonts fallback) is bundled and used by default;
-    users with Whyte (by ABC Dinamo) installed can switch via na_register_fonts("whyte").
+    and sequential color palettes, and a save function with New America export
+    defaults. Uses Chivo (available from Google Fonts) by default; users with
+    Whyte (by ABC Dinamo) installed can switch via na_register_fonts("whyte").
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

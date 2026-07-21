@@ -4,7 +4,11 @@
 \alias{na_base_theme}
 \title{New America base ggplot2 theme}
 \usage{
-na_base_theme()
+na_base_theme(scale = 0.75)
+}
+\arguments{
+\item{scale}{numeric font size multiplier. default 0.75, calibrated for
+medium 300 DPI export. \code{\link[=na_save]{na_save()}} overrides this automatically per size.}
 }
 \value{
 a ggplot2 theme object.
@@ -15,6 +19,7 @@ typography and styling. Use as the foundation for all chart types; apply
 chart-specific helpers (e.g., \code{\link[=na_theme_bar]{na_theme_bar()}}) on top.
 }
 \details{
-font sizes use a 0.75 multiplier calibrated for 300 DPI PNG export via
-\code{\link[=na_save]{na_save()}}. Call \code{\link[=na_register_fonts]{na_register_fonts()}} once per session before plotting.
+font sizes scale with the \code{scale} multiplier. the default (0.75) is
+calibrated for medium-size 300 DPI PNG export via \code{\link[=na_save]{na_save()}}, which
+automatically adjusts the scale for small and large sizes.
 }

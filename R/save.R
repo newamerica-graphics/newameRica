@@ -26,6 +26,7 @@ na_save <- function(filename,
                     plot   = ggplot2::last_plot()) {
   widths  <- c(small = 3.25, medium = 6.5, large = 9)
   heights <- c(small = 2.5,  medium = 4.5, large = 6.5)
+  scales  <- c(small = 0.45, medium = 0.75, large = 1.0)
 
   if (!size %in% names(widths)) {
     stop("`size` must be one of: ", paste(names(widths), collapse = ", "))
@@ -33,6 +34,8 @@ na_save <- function(filename,
 
   w <- widths[[size]]
   h <- if (!is.null(height)) height else heights[[size]]
+
+  plot <- plot + .na_size_theme(scales[[size]])
 
   dir.create(dirname(filename), showWarnings = FALSE, recursive = TRUE)
 
