@@ -2,14 +2,19 @@
 #'
 #' reports the currently active font family and whether Whyte is available
 #' on the system. run this if charts render in the wrong font after calling
-#' [na_register_fonts()].
+#' [na_register_fonts()]. if `showtext` is loaded in the same session, it
+#' will intercept font rendering and cause conflicts -- restart R to resolve.
 #'
 #' @return invisibly returns the active font family name.
 #' @export
 na_check_fonts <- function() {
   active         <- getOption("newameRica.font_family",    "Chivo")
   active_caption <- getOption("newameRica.caption_family", "Chivo")
-  message("Active font: '", active, "' ('", active_caption, "' for captions)")
+  if (active == active_caption) {
+    message("Active font: '", active, "'")
+  } else {
+    message("Active font: '", active, "' ('", active_caption, "' for captions)")
+  }
 
   whyte <- .whyte_system_fonts()
   if (nrow(whyte) > 0) {
