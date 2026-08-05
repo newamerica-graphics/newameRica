@@ -6,7 +6,6 @@ A ggplot2 theme and color palette system implementing New America's data visuali
 
 - R ≥ 4.1
 - ggplot2 ≥ 3.5.0 (included in tidyverse)
-- Packages: `ggplot2`, `ragg`, `systemfonts` (installed automatically as dependencies)
 
 Requires **Chivo** installed as a system font — see [Font notes](#font-notes) below.
 
