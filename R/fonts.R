@@ -35,7 +35,7 @@ na_check_fonts <- function() {
 #' switches the active New America font for the session. call once per session,
 #' or add to your `.Rprofile`.
 #'
-#' `"whyte"` registers Whyte (by ABC Dinamo) from system font directories and
+#' `"whyte"` registers Whyte (by Dinamo) from system font directories and
 #' activates it. Whyte must be installed in `~/Library/Fonts/` or
 #' `/Library/Fonts/` on macOS -- contact the design team for the font files.
 #'

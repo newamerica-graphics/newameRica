@@ -140,6 +140,12 @@ na_null_color <- cool_grey_20
     "3" = c(orange_50, orange_70, orange_90),
     "4" = c(orange_30, orange_50, orange_70, orange_90),
     "5" = c(orange_20, orange_40, orange_60, orange_80, orange_100)
+  ),
+  cool_grey = list(
+    "2" = c(cool_grey_40, cool_grey_70),
+    "3" = c(cool_grey_40, cool_grey_60, cool_grey_80),
+    "4" = c(cool_grey_30, cool_grey_50, cool_grey_70, cool_grey_90),
+    "5" = c(cool_grey_20, cool_grey_40, cool_grey_60, cool_grey_80, cool_grey_100)
   )
 )
 
@@ -152,7 +158,7 @@ na_null_color <- cool_grey_20
 #' continuous gradient (e.g. choropleths, heatmaps) -- the full light-to-dark
 #' ramp is passed to [ggplot2::scale_fill_gradientn()].
 #'
-#' @param palette one of `"teal"` (primary), `"purple"`, or `"orange"`.
+#' @param palette one of `"teal"` (primary), `"purple"`, `"orange"`, or `"cool_grey"`.
 #' @param n number of ordered groups (2--5) for a discrete scale. omit for
 #'   a continuous gradient.
 #' @param ... addt'l arguments passed to [ggplot2::scale_fill_manual()] or
@@ -179,7 +185,7 @@ na_scale_fill_sequential <- function(palette = "teal", n, ...) {
 #' continuous gradient --  full light-to-dark ramp is passed to
 #' [ggplot2::scale_color_gradientn()].
 #'
-#' @param palette one of `"teal"` (primary), `"purple"`, or `"orange"`.
+#' @param palette one of `"teal"` (primary), `"purple"`, `"orange"`, or `"cool_grey"`.
 #' @param n number of ordered groups (2--5) for a discrete scale. omit for
 #'   a continuous gradient.
 #' @param ... addt'l arguments passed to [ggplot2::scale_color_manual()] or

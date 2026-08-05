@@ -103,7 +103,7 @@ ggplot(df_line, aes(x = year, y = value)) +
 
 ## Saving
 
-Use `na_save()` instead of `ggsave()` directly. It uses the ragg device for correct font rendering and applies size-appropriate font scaling automatically.
+Use `na_save()` instead of `ggsave()` directly. It applies size-appropriate font scaling and selects the correct device automatically: ragg for `.png`, svglite for `.svg`.
 
 ```{r save, eval = FALSE}
 na_save("output/bar-chart.png", size = "medium")

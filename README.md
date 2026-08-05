@@ -111,7 +111,7 @@ na_scale_color_categorical(extended = TRUE)
 
 ### Sequential
 
-Three palettes (`"teal"`, `"purple"`, `"orange"`). Supply `n` for a discrete stepped scale; omit `n` for a continuous gradient:
+Four palettes (`"teal"`, `"purple"`, `"orange"`, `"cool_grey"`). Supply `n` for a discrete stepped scale; omit `n` for a continuous gradient:
 
 ```r
 na_scale_fill_sequential("teal", n = 4)    # discrete: 4 ordered steps
@@ -166,7 +166,7 @@ Use grey for only one political group at a time (Independent, or Swing).
 na_save("output/chart.png", size = "medium")
 ```
 
-`na_save()` uses the `ragg` device for correct font rendering. Always use it instead of `ggsave()` directly. All exports are 300 DPI by default. Use the `dpi` argument to override if needed.
+`na_save()` detects the output format from the filename extension. Use `.png` for PNG (ragg device, correct font rendering) or `.svg` for SVG (svglite device). Always use it instead of `ggsave()` directly. PNG exports are 300 DPI by default; the `dpi` argument is ignored for SVG.
 
 ### Size presets (300 DPI)
 
@@ -205,7 +205,7 @@ na_null_color     # Cool Grey/20 — default for missing or deemphasized data
 
 **Chivo** (default) is New America's Google Fonts fallback and must be installed as a system font. Download from Google Fonts — search "Chivo" at fonts.google.com — and install via Font Book on macOS or by right-clicking and selecting "Install for all users" on Windows.
 
-**Whyte** (New America's primary brand font, by ABC Dinamo) can be used instead by users who have it installed. Install the `.otf` files (named `ABCWhyte-*.otf`) via Font Book on macOS or via right-click → "Install for all users" on Windows, then call:
+**Whyte** (New America's primary brand font, by Dinamo) can be used instead by users who have it installed. Install the `.otf` files (named `ABCWhyte-*.otf`) via Font Book on macOS or via right-click → "Install for all users" on Windows, then call:
 
 ```r
 na_register_fonts("whyte")

@@ -1,3 +1,13 @@
+# newameRica 0.1.1
+
+## Saving
+
+* `na_save()` now supports SVG export. Format is detected automatically from the filename extension: use `.png` for PNG (ragg device) or `.svg` for SVG (svglite device). The `dpi` argument is ignored for SVG.
+
+## Color system
+
+* Sequential palettes now include `"cool_grey"` as a fourth option alongside `"teal"`, `"purple"`, and `"orange"`. Available via `na_scale_fill_sequential("cool_grey", n)` and `na_scale_color_sequential("cool_grey", n)`.
+
 # newameRica 0.1.0
 
 Initial release.
@@ -12,7 +22,7 @@ Initial release.
 
 * `na_set_defaults()` — sets global ggplot2 theme and geom color defaults for the session
 * `na_reset_defaults()` — reverses `na_set_defaults()`; restores `theme_gray()` and ggplot2 geom defaults
-* `na_register_fonts()` — switches the active font for the session. Default (`"chivo"`) uses Chivo (install from Google Fonts). Pass `"whyte"` to use Whyte (our custom, licensed font by ABC Dinamo) from system font directories for users who have it installed.
+* `na_register_fonts()` — switches the active font for the session. Default (`"chivo"`) uses Chivo (install from Google Fonts). Pass `"whyte"` to use Whyte (our custom, licensed font by Dinamo) from system font directories for users who have it installed.
 * `na_check_fonts()` — reports which font is active and whether Whyte is available on the system
 
 ## Saving
