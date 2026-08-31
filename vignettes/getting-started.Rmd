@@ -42,10 +42,11 @@ library(ggplot2)  # included in tidyverse — either works
 na_set_defaults()
 ```
 
-If you have Whyte installed and are preparing charts for publication, switch to it now:
+If you have Whyte installed and are preparing charts for publication, register it before `na_set_defaults()`, which reads the active font when it sets the theme:
 
 ```{r whyte, eval = FALSE}
 na_register_fonts("whyte")
+na_set_defaults()
 ```
 
 ## Bar chart

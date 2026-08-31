@@ -42,10 +42,11 @@ Call this once at the top of every script or in your `.Rprofile`:
 na_set_defaults()  # sets global theme and teal defaults for all geoms
 ```
 
-To use our custom, licensed font, Whyte, you will need to register it directly. Please use Whyte if you are preparing charts for publications. Here's how to register:
+To use our custom, licensed font, Whyte, you will need to register it directly. Please use Whyte if you are preparing charts for publications. Register it before `na_set_defaults()`, which reads the active font when it sets the theme:
 
 ```r
 na_register_fonts("whyte")  # registers Whyte + Whyte Book and activates them
+na_set_defaults()
 ```
 
 To restore ggplot2's default theme and geom colors (e.g., if switching between branded and unbranded chart outputs in the same session):
@@ -210,7 +211,7 @@ na_null_color     # Cool Grey/20 — default for missing or deemphasized data
 na_register_fonts("whyte")
 ```
 
-This registers `"Whyte"` (Regular) and `"Whyte Book"` (Book weight for captions) and switches all subsequent theme calls to use them. To switch back to Chivo in the same session:
+This registers `"Whyte"` (Regular) and `"Whyte Book"` (Book weight for captions) and switches all subsequent theme calls to use them. Call it before `na_set_defaults()`. To switch back to Chivo in the same session:
 
 ```r
 na_register_fonts()   # or na_register_fonts("chivo")
