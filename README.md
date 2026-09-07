@@ -218,3 +218,5 @@ na_register_fonts()   # or na_register_fonts("chivo")
 ```
 
 Run `na_check_fonts()` at any time to see which font is active and whether Whyte is available on your system.
+
+If `na_check_fonts()` confirms Whyte is registered and active but it still renders wrong (or triggers a "no font could be found" warning) in the RStudio Plots pane, set RStudio's graphics backend to AGG: Tools → Global Options → General → Graphics → Backend → AGG. It's not a bug on your end, RStudio's default plot device (used for chart previews in the Plots pane, Rmd preview, and Viewer tab) simply skips the font registry `na_register_fonts()` uses. `na_save()` output is unaffected either way.
