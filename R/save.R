@@ -51,6 +51,7 @@ na_save <- function(filename,
       units    = "in",
       bg       = "white"
     )
+    .na_fix_svg_fonts(filename)
   } else {
     ggplot2::ggsave(
       filename = filename,
@@ -65,4 +66,34 @@ na_save <- function(filename,
   }
 
   invisible(filename)
+}
+
+## svglite writes style='...font-family: "X";...' — a double-quoted
+## font-family nested inside a single-quoted style attribute. Figma's SVG
+## importer doesn't recognize multi-word font-family names in that form and
+## silently falls back to Inter. Swapping the font-family quotes to single
+## without changing the outer delimiter would collide with the style
+## attribute's own quotes and produce invalid XML, so both have to change
+## together: outer style='...' -> style="...", inner font-family "X" -> 'X'.
+## only style attributes that actually contain a quoted font-family are
+## touched, so any other double quote that might legitimately appear in a
+## style value (e.g. user-supplied text) is left alone.
+.na_fix_svg_fonts <- function(filename) {
+  svg_text <- paste(readLines(filename, warn = FALSE, encoding = "UTF-8"),
+                     collapse = "\n")
+
+  m <- gregexpr("style='[^']*'", svg_text, perl = TRUE)
+  regmatches(svg_text, m) <- lapply(regmatches(svg_text, m), function(matches) {
+    vapply(matches, function(x) {
+      inner <- substr(x, nchar("style='") + 1, nchar(x) - 1)
+      if (!grepl('font-family:\\s*"[^"]*"', inner, perl = TRUE)) {
+        return(x)
+      }
+      inner <- gsub('font-family:\\s*"([^"]*)"', "font-family: '\\1'", inner,
+                    perl = TRUE)
+      paste0('style="', inner, '"')
+    }, character(1))
+  })
+
+  writeLines(svg_text, filename, useBytes = TRUE)
 }

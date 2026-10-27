@@ -3,6 +3,7 @@
 ## Saving
 
 * `na_save()` now supports SVG export. Format is detected automatically from the filename extension: use `.png` for PNG (ragg device) or `.svg` for SVG (svglite device). The `dpi` argument is ignored for SVG.
+* fixed: SVG exports with multi-word font names (e.g. "ABC Whyte") now import into Figma with the correct font. svglite nests a double-quoted `font-family` value inside a single-quoted `style` attribute, a quoting pattern Figma's SVG font-matching doesn't recognize; `na_save()` now rewrites affected `style` attributes to use non-conflicting quote characters.
 
 ## Color system
 
